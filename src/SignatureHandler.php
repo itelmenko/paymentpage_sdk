@@ -85,7 +85,7 @@ class SignatureHandler
         }
 
         if ($sort) {
-            ksort($paramsToSign, SORT_NATURAL);
+            ksort($paramsToSign, SORT_STRING);
         }
 
         return $paramsToSign;
