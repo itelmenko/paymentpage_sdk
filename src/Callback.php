@@ -116,7 +116,7 @@ class Callback
      *
      * @return string
      */
-    public function getPaymentStatus(): string
+    public function getPaymentStatus()
     {
         return $this->getValueByName('status', $this->getPayment());
     }
@@ -126,7 +126,7 @@ class Callback
      *
      * @return string
      */
-    public function getPaymentId(): string
+    public function getPaymentId()
     {
         return $this->getValueByName('id', $this->getPayment());
     }
@@ -136,7 +136,7 @@ class Callback
      *
      * @return string
      */
-    public function getSignature(): string
+    public function getSignature()
     {
         return $this->getValueByName('signature');
     }
@@ -150,7 +150,7 @@ class Callback
      *
      * @throws ProcessException
      */
-    public function toArray($rawData): array
+    public function toArray($rawData)
     {
         $data = json_decode($rawData, true);
 
@@ -169,7 +169,7 @@ class Callback
      *
      * @return mixed
      */
-    private function getValueByName($name, array $data = [])
+    private function getValueByName($name, array $data = array())
     {
         if (!$data) {
             $data = $this->data;
@@ -191,7 +191,7 @@ class Callback
      *
      * @return boolean
      */
-    public function checkSignature(): bool
+    public function checkSignature()
     {
         $data = $this->data;
         $signature = $this->getSignature();

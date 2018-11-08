@@ -93,7 +93,7 @@ class Payment
      *
      * @return array
      */
-    public function getParams(): array
+    public function getParams()
     {
         return $this->params;
     }
@@ -105,7 +105,7 @@ class Payment
      *
      * @return Payment
      */
-    public function setBestBefore(\DateTime $time): Payment
+    public function setBestBefore(\DateTime $time)
     {
         $this->params['best_before'] = $time->format('r');
         return $this;
@@ -117,7 +117,7 @@ class Payment
      * @param array $amounts
      * @return Payment
      */
-    public function setCashierPredefinedAmounts(array $amounts): Payment
+    public function setCashierPredefinedAmounts(array $amounts)
     {
         $this->params['cashier_predefined_amounts'] = implode(',', $amounts);
 

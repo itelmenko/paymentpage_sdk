@@ -25,7 +25,7 @@ class PaymentPage
      * @param SignatureHandler $signatureHandler
      * @param string $baseUrl
      */
-    public function __construct(SignatureHandler $signatureHandler, string $baseUrl = '')
+    public function __construct(SignatureHandler $signatureHandler, string $baseUrl = NULL)
     {
         $this->signatureHandler = $signatureHandler;
 
@@ -41,7 +41,7 @@ class PaymentPage
      *
      * @return string
      */
-    public function getUrl(Payment $payment): string
+    public function getUrl(Payment $payment)
     {
         return $this->baseUrl . '?'. http_build_query(array_map('urlencode', $payment->getParams())) . '&signature=' .
             urlencode($this->signatureHandler->sign($payment->getParams()));

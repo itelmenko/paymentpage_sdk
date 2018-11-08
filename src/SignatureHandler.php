@@ -37,7 +37,7 @@ class SignatureHandler
      * @param string $signature
      * @return boolean
      */
-    public function check(array $params, $signature): bool
+    public function check(array $params, $signature)
     {
         return $this->sign($params) === $signature;
     }
@@ -48,7 +48,7 @@ class SignatureHandler
      * @param array $params
      * @return string
      */
-    public function sign(array $params): string
+    public function sign(array $params)
     {
         $stringToSign = implode(self::ITEMS_DELIMITER, $this->getParamsToSign($params));
         return base64_encode(hash_hmac(self::ALGORITHM, $stringToSign, $this->secretKey, true));
@@ -64,9 +64,9 @@ class SignatureHandler
      *
      * @return array
      */
-    private function getParamsToSign(array $params, array $ignoreParamKeys = [], $prefix = '', $sort = true)
+    private function getParamsToSign(array $params, array $ignoreParamKeys = array(), $prefix = '', $sort = true)
     {
-        $paramsToSign = [];
+        $paramsToSign = array();
 
         foreach ($params as $key => $value) {
             $paramKey = ($prefix ? $prefix . ':' : '') . $key;
