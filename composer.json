@@ -1,5 +1,5 @@
 {
-    "name": "ecommpay-php5-sdk",
+    "name": "ecommpay/php5sdk",
     "description": "Ecommpay SDK",
     "type": "library",
     "authors": [
