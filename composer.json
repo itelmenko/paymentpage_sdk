@@ -1,11 +1,11 @@
 {
-    "name": "ecommpay/paymentpage-sdk",
+    "name": "ecommpay-php5-sdk",
     "description": "Ecommpay SDK",
     "type": "library",
     "authors": [
         {
-            "name": "Roman Zhukov",
-            "email": "r.zhukov@it.ecommpay.com"
+            "name": "Igor Telmenko",
+            "email": "izumeroot@gmail.com"
         }
     ],
     "autoload": {

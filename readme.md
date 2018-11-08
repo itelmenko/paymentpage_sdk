@@ -1,5 +1,7 @@
 # EcommPay PHP SDK
 
+Forked from [ecommpay/paymentpage-sdk](https://github.com/ITECOMMPAY/paymentpage_sdk)
+
 [![Build Status](https://travis-ci.org/ITECOMMPAY/paymentpage_sdk.svg?branch=master)](https://travis-ci.org/ITECOMMPAY/paymentpage_sdk)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/13f0385331642461cba7/test_coverage)](https://codeclimate.com/github/ITECOMMPAY/paymentpage_sdk/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/13f0385331642461cba7/maintainability)](https://codeclimate.com/github/ITECOMMPAY/paymentpage_sdk/maintainability)
@@ -7,7 +9,7 @@
 This is a set of libraries in the PHP language to ease integration of your service
 with the EcommPay Payment Page.
 
-Please note that for correct SDK operating you must have at least PHP 7.0.  
+Please note that for correct SDK operating you must have at least PHP 5.3.10  
 
 ## Payment flow
 
