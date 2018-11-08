@@ -25,7 +25,7 @@ class PaymentPage
      * @param SignatureHandler $signatureHandler
      * @param string $baseUrl
      */
-    public function __construct(SignatureHandler $signatureHandler, string $baseUrl = NULL)
+    public function __construct(SignatureHandler $signatureHandler, $baseUrl = NULL)
     {
         $this->signatureHandler = $signatureHandler;
 

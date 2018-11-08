@@ -81,11 +81,11 @@ class Payment
      */
     private $params;
 
-    public function __construct(string $projectId)
+    public function __construct($projectId)
     {
-        $this->params = [
+        $this->params = array(
             'project_id' => $projectId,
-        ];
+		);
     }
 
     /**
