@@ -43,7 +43,7 @@ class PaymentPage
      */
     public function getUrl(Payment $payment)
     {
-        return $this->baseUrl . '?'. $this->getData($payment);
+        return $this->baseUrl . '?'. http_build_query($this->getData($payment));
     }
 
     /**
