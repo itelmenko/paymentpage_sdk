@@ -54,6 +54,6 @@ class PaymentPage
     protected function getData(Payment $payment) {
         $data = $payment->getParams();
         $data['signature'] = $this->signatureHandler->sign($payment->getParams());
-        return $data;
+		return array_map('rawurlencode', $data);
     }
 }
