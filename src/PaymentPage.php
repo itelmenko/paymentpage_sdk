@@ -46,14 +46,23 @@ class PaymentPage
         return $this->baseUrl . '?'. http_build_query($this->getData($payment));
     }
 
+	/**
+	 * Get base URL
+	 * @return null|string
+	 */
+    public function getBaseUrl()
+    {
+        return $this->baseUrl;
+    }
+
     /**
      * Get parameters for payment
      * @param Payment $payment
      * @return array
      */
-    protected function getData(Payment $payment) {
+    public function getData(Payment $payment) {
         $data = $payment->getParams();
         $data['signature'] = $this->signatureHandler->sign($payment->getParams());
-		return array_map('rawurlencode', $data);
+        return $data;
     }
 }

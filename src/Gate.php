@@ -16,7 +16,7 @@ class Gate
      *
      * @var PaymentPage $paymentPageUrlBuilder
      */
-    private $paymentPageUrlBuilder;
+    public $paymentPageUrlBuilder;
 
     /**
      * Signature Handler (check, sign)
